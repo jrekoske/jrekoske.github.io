@@ -1,0 +1,26 @@
+current directory: /Users/jrekoske/Repositories/jrekoske.github.io/vendor/bundle/ruby/3.1.0/gems/racc-1.5.2/ext/racc/cparse
+/usr/local/opt/ruby/bin/ruby -I /usr/local/lib/ruby/site_ruby/3.1.0 -r ./siteconf20220525-79878-f668hx.rb extconf.rb
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/jrekoske/Repositories/jrekoske.github.io/vendor/bundle/ruby/3.1.0/gems/racc-1.5.2/ext/racc/cparse
+make DESTDIR\= clean
+
+current directory: /Users/jrekoske/Repositories/jrekoske.github.io/vendor/bundle/ruby/3.1.0/gems/racc-1.5.2/ext/racc/cparse
+make DESTDIR\=
+compiling cparse.c
+cparse.c:302:5: warning: 'rb_iterate' is deprecated: by: rb_block_call since 1.9 [-Wdeprecated-declarations]
+    rb_iterate(lexer_iter, v->value_v, lexer_i, v->value_v);
+    ^
+/usr/local/Cellar/ruby/3.1.1/include/ruby-3.1.0/ruby/internal/iterator.h:269:1: note: 'rb_iterate' has been explicitly marked deprecated here
+RBIMPL_ATTR_DEPRECATED(("by: rb_block_call since 1.9"))
+^
+/usr/local/Cellar/ruby/3.1.1/include/ruby-3.1.0/ruby/internal/attr/deprecated.h:36:53: note: expanded from macro 'RBIMPL_ATTR_DEPRECATED'
+# define RBIMPL_ATTR_DEPRECATED(msg) __attribute__((__deprecated__ msg))
+                                                    ^
+1 warning generated.
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/jrekoske/Repositories/jrekoske.github.io/vendor/bundle/ruby/3.1.0/gems/racc-1.5.2/ext/racc/cparse
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20220525-79878-7krqq6/racc
