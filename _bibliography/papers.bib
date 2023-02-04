@@ -115,4 +115,24 @@
   file = {/Users/jrekoske/Zotero/storage/AA28AL5E/Rekoske et al. - 2021 - Basin and Site Effects in the U.S. Pacific Northwe.pdf;/Users/jrekoske/Zotero/storage/IAHGQ922/Basin-and-Site-Effects-in-the-U-S-Pacific.html}
 }
 
+@article{kleckner2022automated,
+  title     = {Automated Detection of Clipping in Broadband Earthquake Records},
+  author    = {Kleckner, James K and Withers, Kyle B and Thompson, Eric M and Rekoske, John M and Wolin, Emily and Moschetti, Morgan P},
+  journal   = {Seismological Research Letters},
+  volume    = {93},
+  number    = {2A},
+  pages     = {880--896},
+  year      = {2022},
+  publisher = {GeoScienceWorld},
+  abstract = {Because the amount of available ground‐motion data has increased over the last decades, the need for automated processing algorithms has also increased. One difficulty with automated processing is to screen clipped records. Clipping occurs when the ground‐motion amplitude exceeds the dynamic range of the linear response of the instrument. Clipped records in which the amplitude exceeds the dynamic range are relatively easy to identify visually yet challenging for automated algorithms. In this article, we seek to identify a reliable and fully automated clipping detection algorithm tailored to near‐real‐time earthquake response needs. We consider multiple alternative algorithms, including (1) an algorithm based on the percentage difference in adjacent data points, (2) the standard deviation of the data within a moving window, (3) the shape of the histogram of the recorded amplitudes, (4) the second derivative of the data, and (5) the amplitude of the data. To quantitatively compare these algorithms, we construct development and holdout datasets from earthquakes across a range of geographic regions, tectonic environments, and instrument types. We manually classify each record for the presence of clipping and use the classified records. We then develop an artificial neural network model that combines all the individual algorithms. Testing on the holdout dataset, the standard deviation and histogram approaches are the most accurate individual algorithms, with an overall accuracy of about 93%. The combined artificial neural network method yields an overall accuracy of 95%, and the choice of classification threshold can balance precision and recall.},
+  url = {https://doi.org/10.1785/0220210028}
+}
 
+@article{rekoske2022instantaneous,
+  title   = {Instantaneous physics-based ground motion maps using reduced-order models},
+  author  = {Rekoske, John M and Gabriel, Alice-Agnes and May, Dave A},
+  journal = {arXiv preprint arXiv:2212.11335},
+  year    = {2022},
+  abstract = {hysics-based simulations of earthquake ground motion are useful to complement recorded ground motion data. However, the computational expense of realistic numerical simulations complicates their applicability to problems that need real-time solutions (e.g., earthquake early warning) or many solutions for different earthquake sources (e.g., probabilistic seismic hazard assessment). Here, we present a reduced-order model (ROM) that instantaneously generates peak ground velocity (PGV) maps. The predicted ground motions closely approximate high-resolution 3D seismic wave propagation simulation results up to 2 Hz that ordinarily require high-performance computing. We use the interpolated proper orthogonal decomposition technique, a type of surrogate modeling approach. We verify the ROM accuracy using simulations for flat 1D layered and 3D velocity models that include topography. In both cases, the simulated PGV maps exhibit low-rank structure. We quantitatively compare four function approximators to find the best-fitting ROMs: radial basis function (RBF) interpolation, multilayer perceptron neural networks, random forests and k-nearest neighbors. We find RBFs are the most accurate approximator, resulting in < 0.1 cm/s average PGV error when applied to an independent testing dataset. We apply the ROMs to predict PGV maps for 1 million different focal mechanisms, in which the ROMs identify potentially damaging ground motions that might be overlooked when using only a few physics-based simulations. We also quantify correlations between focal mechanism, depth, and accuracy of the predicted PGV. Overall, the ROM approach demonstrates a new way to obtain physics-informed ground motion estimates on demand.},
+  url = {https://doi.org/10.48550/arXiv.2212.11335}
+}
