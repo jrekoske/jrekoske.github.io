@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: John Rekoske's website # the website title (if blank, full name will be used instead)
+title: # the website title (if blank, full name will be used instead)
 first_name: John
 middle_name: M.
 last_name: Rekoske
