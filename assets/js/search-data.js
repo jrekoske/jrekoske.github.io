@@ -30,12 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "news-our-paper-reduced-order-modelling-for-complex-three-dimensional-seismic-wave-propagation-was-just-published-in-geophysical-journal-international-go-check-it-out",
+        },{id: "news-our-paper-reduced-order-modelling-for-complex-three-dimensional-seismic-wave-propagation-was-just-published-in-geophysical-journal-international-go-check-it-out",
           title: 'Our paper, Reduced-order modelling for complex three-dimensional seismic wave propagation, was just published...',
           description: "",
           section: "News",},{
