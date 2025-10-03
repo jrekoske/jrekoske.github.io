@@ -8,10 +8,7 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  more_info:
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -23,8 +20,8 @@ announcements:
 
 latest_posts:
   enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
+  limit: 0 # leave blank to include all the blog posts
 ---
 Hello! I am a geophysics Ph.D. candidate at Scripps Institution of Oceanography, UC San Diego. I currently work with [Alice-Agnes Gabriel](https://algabriel.scrippsprofiles.ucsd.edu/) and [Dave May](https://dmay.scrippsprofiles.ucsd.edu/) on reduced-order modeling techniques for simulating earthquake ground motion and understanding source physics. More generally, I am interested in understanding earthquake source mechanics and the propagation of seismic waves, with a focus on seismic hazard and earthquake early warning. In my research, I use hybrid (physics-based coupled with machine learning) models, high-performance computing, and other emerging technologies (e.g., distributed acoustic sensing) to better understand and mitigate earthquake hazard.
 
