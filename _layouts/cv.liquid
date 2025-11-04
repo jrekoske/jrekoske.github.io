@@ -16,8 +16,9 @@ layout: default
             target="_blank"
             rel="noopener noreferrer"
             class="float-right"
+            title="Download PDF"
           >
-            <i class="fa-solid fa-file-pdf"></i>
+            <i class="fa-solid fa-download"></i>
           </a>
         {% endif %}
       </h1>
@@ -27,6 +28,19 @@ layout: default
     </header>
 
     <article>
+      {% if page.cv_pdf %}
+        <div class="cv-pdf-container" style="width: 100%; height: 800px; margin-bottom: 2rem;">
+          <object
+            data="{% if page.cv_pdf contains '://' %}{{ page.cv_pdf }}{% else %}{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}{% endif %}"
+            type="application/pdf"
+            width="100%"
+            height="100%"
+            style="border: 1px solid var(--global-divider-color); border-radius: 4px;"
+          >
+            <p>Your browser doesn't support embedded PDFs. You can <a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}">download the PDF</a> instead.</p>
+          </object>
+        </div>
+      {% endif %}
       <div class="cv">
         {% for entry in site.data.cv %}
           <a class="anchor" id="{{ entry.title }}"></a>
@@ -67,8 +81,9 @@ layout: default
             target="_blank"
             rel="noopener noreferrer"
             class="float-right"
+            title="Download PDF"
           >
-            <i class="fa-solid fa-file-pdf"></i>
+            <i class="fa-solid fa-download"></i>
           </a>
         {% endif %}
       </h1>
@@ -78,6 +93,19 @@ layout: default
     </header>
 
     <article>
+      {% if page.cv_pdf %}
+        <div class="cv-pdf-container" style="width: 100%; height: 800px; margin-bottom: 2rem;">
+          <object
+            data="{% if page.cv_pdf contains '://' %}{{ page.cv_pdf }}{% else %}{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}{% endif %}"
+            type="application/pdf"
+            width="100%"
+            height="100%"
+            style="border: 1px solid var(--global-divider-color); border-radius: 4px;"
+          >
+            <p>Your browser doesn't support embedded PDFs. You can <a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}">download the PDF</a> instead.</p>
+          </object>
+        </div>
+      {% endif %}
       <div class="cv">
         {% for data in site.data.resume %}
           {% if site.jsonresume and site.jsonresume.size > 0 %}
