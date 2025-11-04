@@ -35,6 +35,7 @@ table {
   }
 }
 
+
 a,
 table.table a {
   color: var(--global-theme-color);
@@ -198,7 +199,6 @@ ul.task-list input[type="checkbox"] {
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
-    font-family: monospace;
 
     p {
       display: inline-block;
@@ -1360,7 +1360,6 @@ figure.cover {
   }
 
   figcaption.abandoned {
-    font-family: monospace;
     color: #23212d;
     text-transform: uppercase;
     background-color: #ee5f5b;
@@ -1368,28 +1367,24 @@ figure.cover {
 
   figcaption.finished,
   figcaption.watched {
-    font-family: monospace;
     color: #23212d;
     text-transform: uppercase;
     background-color: #62c462;
   }
 
   figcaption.interested {
-    font-family: monospace;
     color: #23212d;
     text-transform: uppercase;
     background-color: #7691db;
   }
 
   figcaption.paused {
-    font-family: monospace;
     color: #23212d;
     text-transform: uppercase;
     background-color: #bdac7e;
   }
 
   figcaption.queued {
-    font-family: monospace;
     color: #23212d;
     text-transform: uppercase;
     background-color: #9e76b5;
@@ -1397,7 +1392,6 @@ figure.cover {
 
   figcaption.reading,
   figcaption.watching {
-    font-family: monospace;
     color: #23212d;
     text-transform: uppercase;
     background-color: #f89406;
@@ -1405,14 +1399,12 @@ figure.cover {
 
   figcaption.reread,
   figcaption.rewatch {
-    font-family: monospace;
     color: #23212d;
     text-transform: uppercase;
     background-color: #a6517d;
   }
 
   figcaption.uncategorized {
-    font-family: monospace;
     color: #23212d;
     text-transform: uppercase;
     background-color: #b0abb3;
