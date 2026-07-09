@@ -1,9 +1,0 @@
-github_users:
-  - jrekoske
-  - jrekoske-usgs
-
-repo_description_lines_max: 3
-
-github_repos:
-  - jrekoske/Instantaneous-PhysicsBased-GroundMotionMaps
-  - jrekoske/Rapid-Physics-Based-Seismograms
