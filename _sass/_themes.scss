@@ -6,21 +6,31 @@
 
 :root {
   color-scheme: light;
-  font-family: "Times New Roman", Times, serif;
-  --global-bg-color: #{$white-color};
+
+  // Type stacks. Source Serif 4 is a screen-optimised text serif; Inter
+  // carries the interface chrome (nav, dates, badges).
+  --font-serif: "Source Serif 4", "Source Serif Pro", Charter, "Iowan Old Style", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  font-family: var(--font-serif);
+  --global-bg-color: #fbfaf7;
   --global-code-bg-color: #{$code-bg-color-light};
-  --global-text-color: #{$black-color};
-  --global-text-color-light: #{$grey-color};
-  --global-theme-color: #005bdc;
-  --global-hover-color: #{$purple-color};
+  --global-text-color: #1b1d21;
+  --global-text-color-light: #6b7280;
+  --global-theme-color: #1d4e89;
+  --global-hover-color: #2f74c0;
   --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-dark};
-  --global-footer-text-color: #{$grey-color-light};
-  --global-footer-link-color: #{$white-color};
+  --global-footer-bg-color: #f2efe9;
+  --global-footer-text-color: #6b7280;
+  --global-footer-link-color: #1d4e89;
   --global-distill-app-color: #{$grey-color};
-  --global-divider-color: rgb(0, 0, 0);
+  --global-divider-color: rgba(27, 29, 33, 0.13);
   --global-card-bg-color: #{$white-color};
   --global-highlight-color: #{$red-color-dark};
+  --global-nav-bg-color: rgba(251, 250, 247, 0.82);
+  --global-accent-soft: rgba(29, 78, 137, 0.08);
+  --global-shadow-color: rgba(16, 24, 40, 0.1);
+  --global-shadow-color-strong: rgba(16, 24, 40, 0.16);
   --global-back-to-top-bg-color: rgba(
     #{color.channel($black-color, "red", $space: rgb)},
     #{color.channel($black-color, "green", $space: rgb)},
@@ -79,19 +89,23 @@
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --global-bg-color: #{$grey-color-dark};
+  --global-bg-color: #16181d;
   --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$grey-color-light};
-  --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$cyan-color};
-  --global-hover-color: #{$cyan-color};
+  --global-text-color: #dcdee3;
+  --global-text-color-light: #99a1ad;
+  --global-theme-color: #7cb0e8;
+  --global-hover-color: #a9cdf3;
   --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-light};
-  --global-footer-text-color: #{$grey-color-dark};
-  --global-footer-link-color: #{$black-color};
+  --global-footer-bg-color: #101216;
+  --global-footer-text-color: #99a1ad;
+  --global-footer-link-color: #a9cdf3;
   --global-distill-app-color: #{$grey-color-light};
-  --global-divider-color: #424246;
-  --global-card-bg-color: #{$grey-900};
+  --global-divider-color: rgba(255, 255, 255, 0.13);
+  --global-card-bg-color: #1e2128;
+  --global-nav-bg-color: rgba(22, 24, 29, 0.82);
+  --global-accent-soft: rgba(124, 176, 232, 0.13);
+  --global-shadow-color: rgba(0, 0, 0, 0.4);
+  --global-shadow-color-strong: rgba(0, 0, 0, 0.55);
   --global-back-to-top-bg-color: rgba(
     #{color.channel($white-color, "red", $space: rgb)},
     #{color.channel($white-color, "green", $space: rgb)},

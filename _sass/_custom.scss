@@ -1,0 +1,370 @@
+/*******************************************************************************
+ * Custom design layer.
+ *
+ * Loaded last so it refines the stock al-folio look without forking _base.scss.
+ * Everything here reads from the tokens defined in _themes.scss, so light and
+ * dark modes stay in sync.
+ ******************************************************************************/
+
+// Typography ------------------------------------------------------------------
+
+// MDB ships `body { font-family: Roboto }`, which beats the stack inherited
+// from :root — so the body rule has to be restated here to take effect.
+body {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.014em;
+  line-height: 1.24;
+}
+
+// Interface chrome reads better in a neutral sans than in the body serif.
+.navbar,
+.navbar-brand,
+.nav-link,
+footer,
+.post-meta,
+.post-tags,
+.post-description,
+.caption,
+.badge,
+.contact-note,
+.profile .more-info,
+.news th,
+.publications h2.bibliography,
+.publications .links a,
+.pagination {
+  font-family: var(--font-sans);
+}
+
+a {
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 0.07em;
+  transition: color 0.18s ease;
+
+  &:hover {
+    color: var(--global-hover-color);
+  }
+}
+
+// Page header -----------------------------------------------------------------
+
+.post-header {
+  margin-bottom: 2.5rem;
+
+  .post-title {
+    font-size: clamp(2.2rem, 4.6vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.028em;
+    margin-bottom: 0;
+
+    // Short accent rule to anchor the page and carry the theme colour.
+    &::after {
+      content: "";
+      display: block;
+      width: 3.25rem;
+      height: 3px;
+      margin-top: 1.1rem;
+      border-radius: 3px;
+      background: var(--global-theme-color);
+    }
+  }
+
+  .desc,
+  .post-description {
+    color: var(--global-text-color-light);
+    font-size: 0.95rem;
+    margin-top: 1rem;
+  }
+}
+
+// Section headings on the about page ("News", "Selected Publications").
+.post > article > h2 {
+  font-size: 1.6rem;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--global-divider-color);
+  letter-spacing: -0.02em;
+}
+
+// Navbar ----------------------------------------------------------------------
+
+.navbar {
+  opacity: 1; // base sets 0.95, which fades the text too
+  background-color: var(--global-nav-bg-color);
+  border-bottom: 1px solid var(--global-divider-color);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+}
+
+.navbar.navbar-light {
+  .navbar-brand {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+  }
+
+  .navbar-nav .nav-item.active > .nav-link {
+    font-weight: 600;
+
+    // Replaces the stock bold-only active state with an underline marker.
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0.5rem;
+      right: 0.5rem;
+      bottom: 0;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--global-theme-color);
+    }
+  }
+}
+
+// Profile ---------------------------------------------------------------------
+
+.profile {
+  img {
+    box-shadow:
+      0 0 0 1px var(--global-divider-color),
+      0 14px 34px var(--global-shadow-color-strong);
+  }
+
+  .more-info {
+    font-size: 0.875rem;
+    color: var(--global-text-color-light);
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+// News ------------------------------------------------------------------------
+
+.news {
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  th,
+  td {
+    padding-top: 0.95rem;
+    padding-bottom: 0.95rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    vertical-align: top;
+  }
+
+  th {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+    white-space: nowrap;
+    padding-top: 1.15rem; // optical alignment with the serif body text
+  }
+
+  tr:last-child {
+    th,
+    td {
+      border-bottom: none;
+    }
+  }
+}
+
+// Publications ----------------------------------------------------------------
+
+.publications {
+  ol.bibliography > li {
+    margin-bottom: 1.1rem;
+    padding: 1.35rem 1.4rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 14px;
+    background: var(--global-card-bg-color);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      border-color 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      border-color: var(--global-theme-color);
+      box-shadow: 0 10px 30px var(--global-shadow-color);
+    }
+
+    .title {
+      font-family: var(--font-serif);
+      font-size: 1.12rem;
+      font-weight: 600;
+      line-height: 1.4;
+      letter-spacing: -0.012em;
+      margin-bottom: 0.35rem;
+    }
+
+    .author,
+    .periodical {
+      font-size: 0.95rem;
+    }
+
+    .author {
+      color: var(--global-text-color-light);
+    }
+
+    .preview {
+      border-radius: 8px;
+    }
+  }
+
+  // Year separators: quieter, left-aligned, set in the interface sans.
+  h2.bibliography {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+    text-align: left;
+    border-top: none;
+    border-bottom: 1px solid var(--global-divider-color);
+    padding-bottom: 0.5rem;
+    margin-top: 2.75rem;
+    margin-bottom: 1.35rem;
+
+    span {
+      font-size: inherit;
+    }
+  }
+
+  .links a.btn {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    border: 1px solid var(--global-divider-color);
+    color: var(--global-theme-color);
+    padding: 0.28rem 0.85rem;
+    transition: all 0.18s ease;
+
+    &:hover {
+      background: var(--global-theme-color);
+      border-color: var(--global-theme-color);
+      color: var(--global-hover-text-color);
+      text-decoration: none;
+    }
+  }
+}
+
+// Social icons ----------------------------------------------------------------
+
+// The stock 4rem icon row overwhelms the foot of the page; this trades it for a
+// compact row of bordered circles.
+.social {
+  margin-top: 3.5rem;
+
+  .contact-icons {
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    justify-content: center;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.85rem;
+      height: 2.85rem;
+      border-radius: 50%;
+      border: 1px solid var(--global-divider-color);
+      transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+
+      i::before {
+        font-size: 1.15rem;
+      }
+
+      img,
+      svg {
+        width: 1.15rem;
+        height: 1.15rem;
+        margin-bottom: 0;
+
+        image {
+          width: 1.15rem;
+          height: 1.15rem;
+        }
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: var(--global-theme-color);
+        background-color: var(--global-accent-soft);
+      }
+    }
+  }
+
+  .contact-note {
+    margin-top: 1.25rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+// Bibliography filter --------------------------------------------------------
+
+// The base rule styles this from the newsletter tokens, which invert in dark
+// mode; pin it to the card palette instead so it matches the entries below it.
+#bibsearch {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--global-text-color);
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  box-shadow: none;
+  padding: 0.55rem 1.1rem;
+  margin-bottom: 1.5rem;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+
+  &::placeholder {
+    color: var(--global-text-color-light);
+  }
+
+  &:focus {
+    border-color: var(--global-theme-color);
+    box-shadow: 0 0 0 3px var(--global-accent-soft);
+  }
+}
+
+// Footer ----------------------------------------------------------------------
+
+footer.fixed-bottom,
+footer.sticky-bottom {
+  font-size: 0.82rem;
+  border-top: 1px solid var(--global-divider-color);
+}
