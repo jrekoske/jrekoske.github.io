@@ -26,6 +26,9 @@ ninja.data = [{
         },{id: "news-our-paper-reduced-order-modelling-for-complex-three-dimensional-seismic-wave-propagation-was-just-published-in-geophysical-journal-international-go-check-it-out",
           title: 'Our paper, Reduced-order modelling for complex three-dimensional seismic wave propagation, was just published...',
           description: "",
+          section: "News",},{id: "news-our-paper-efficient-physics-informed-ground-motion-simulations-with-reduced-order-models-cybershake-implications-and-high-resolution-site-terms-for-southern-san-andreas-fault-earthquakes-was-just-published-in-bulletin-of-the-seismological-society-of-america-go-check-it-out",
+          title: 'Our paper, Efficient Physics-Informed Ground-Motion Simulations with Reduced-Order Models: CyberShake Implications and High-Resolution...',
+          description: "",
           section: "News",},{
       id: 'light-theme',
       title: 'Change theme to light',
